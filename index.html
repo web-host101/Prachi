@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Surprise</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <!-- Confetti Canvas -->
+  <canvas id="confetti-canvas"></canvas>
+
+  <!-- Ambient Glowing Atmosphere -->
+  <div class="ambient-glow">
+    <div class="glow-orb orb-1"></div>
+    <div class="glow-orb orb-2"></div>
+    <div class="glow-orb orb-3"></div>
+  </div>
+
+  <!-- Floating Balloons Container -->
+  <div class="balloons-container" id="balloons"></div>
+
+  <!-- Full-screen Countdown Cover Page -->
+  <div class="cover-page" id="coverPage">
+    <div class="cover-ambient-glow">
+      <div class="glow-orb orb-1"></div>
+      <div class="glow-orb orb-2"></div>
+    </div>
+    <div class="cover-content">
+      <div class="cover-badge">✨ ALMOST TIME TO CELEBRATE ✨</div>
+      <h1 class="cover-title">Counting Down To <br><span class="gradient-rose"></span>🎂🎂🎂🎂 </h1>
+      <p class="cover-subtitle">Something truly special is about to begin...</p>
+
+      <div class="cover-countdown" id="coverCountdown">
+        <div class="cover-countdown-cell">
+          <span class="cover-number" id="coverDays">00</span>
+          <span class="cover-label">Days</span>
+        </div>
+        <span class="cover-sep">:</span>
+        <div class="cover-countdown-cell">
+          <span class="cover-number" id="coverHours">00</span>
+          <span class="cover-label">Hours</span>
+        </div>
+        <span class="cover-sep">:</span>
+        <div class="cover-countdown-cell">
+          <span class="cover-number" id="coverMinutes">00</span>
+          <span class="cover-label">Minutes</span>
+        </div>
+        <span class="cover-sep">:</span>
+        <div class="cover-countdown-cell">
+          <span class="cover-number" id="coverSeconds">00</span>
+          <span class="cover-label">Seconds</span>
+        </div>
+      </div>
+
+      <div class="cover-message" id="coverStatusText">
+        ⏳ Counting down to November 25th midnight ✨
+      </div>
+
+      <button class="btn btn-primary cover-enter-btn locked" id="enterBtn" disabled>
+        <span>🔒 Locked Until Midnight</span>
+      </button>
+
+      <div class="cover-lock-notice" id="coverLockNotice"></div>
+    </div>
+  </div>
+
+  
+  <div class="content-wrapper">
+
+    <!-- Hero Section -->
+    <header class="hero-section" id="home">
+      <div class="container">
+        <div class="hero-content">
+          <div class="hero-tag">✨ CELEBRATING THE BIRTHDAY STAR ✨</div>
+          
+          <h1 class="hero-title">
+            Happy Birthday, <br><span class="gradient-rose">Prachi!</span> 👑
+          </h1>
+
+          <div class="hero-from-pill">
+            With love, <span class="sender">Siddharth</span> 💖
+          </div>
+
+          <div class="hero-card">
+            <p class="hero-quote">
+              Happy Birthday, my princess! ❤️🎂 You are my happiness, my biggest blessing, and my favourite person. May your life always be filled with love, smiles, and endless happiness. Keep shining and smiling, because your smile means the world to me. I love you so much, my jaan! ❤️😘🫶
+            </p>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Heartfelt Note Section -->
+    <section class="letter-section" id="note">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge">From The Heart</span>
+          <h2 class="section-title">A Note Just <span class="gradient-rose">For You</span></h2>
+          <p class="section-subtitle">Words will never be enough to capture how much you mean to me.</p>
+        </div>
+
+        <div class="letter-wrapper">
+          <div class="letter-paper">
+            <div class="letter-stamp">❤️</div>
+            <h3 class="letter-salutation">My Dearest Prachi,</h3>
+            
+            <div class="letter-body">
+              <p>
+                I don't say this enough, but having you around makes my whole world softer and brighter. Your laugh is still the best part of my day, and seeing you happy is honestly all I care about.
+              </p>
+              <p>
+                Today is all about celebrating you. I hope this year gives you every bit of joy, peace, and excitement you deserve.
+              </p>
+              <p>
+                No matter how fast time flies, you'll always be my favourite person, my best friend, and my little princess.
+              </p>
+            </div>
+
+            <div class="letter-signature">
+              <div class="letter-sign-text">Yours forever and always,</div>
+              <div class="letter-sign-name">Siddharth</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Lookbook Photo Gallery -->
+    <section class="gallery-section" id="lookbook">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge">Her Style & Grace</span>
+          <h2 class="section-title">The <span class="gradient-rose">Lookbook</span></h2>
+          <p class="section-subtitle">A visual celebration of her candid smiles, elegance, and timeless charm.</p>
+        </div>
+
+        <div class="gallery-grid">
+          <!-- Photo 1 -->
+          <div class="polaroid-card">
+            <div class="polaroid-media">
+              <img src="photo_2026-11-19_20-05-39.jpg" alt="Golden Hour Glow" loading="lazy">
+              <span class="polaroid-badge">✨ Radiance</span>
+              <div class="polaroid-zoom-hint">🔍</div>
+            </div>
+            <div class="polaroid-caption">
+              <h4 class="polaroid-title">Golden Hour Glow</h4>
+              <p class="polaroid-desc">Effortless beauty and a smile that steals the show.</p>
+            </div>
+          </div>
+
+          <!-- Photo 2 -->
+          <div class="polaroid-card">
+            <div class="polaroid-media">
+              <img src="photo_2026-11-19_20-06-28.jpg" alt="Unfiltered Laughter" loading="lazy">
+              <span class="polaroid-badge">🌸 Pure Joy</span>
+              <div class="polaroid-zoom-hint">🔍</div>
+            </div>
+            <div class="polaroid-caption">
+              <h4 class="polaroid-title">Unfiltered Laughter</h4>
+              <p class="polaroid-desc">The kind of infectious joy that makes everyone smile.</p>
+            </div>
+          </div>
+
+          <!-- Photo 3 -->
+          <div class="polaroid-card">
+            <div class="polaroid-media">
+              <img src="photo_2026-11-19_20-06-36.jpg" alt="Chic & Poised" loading="lazy">
+              <span class="polaroid-badge">💖 Grace</span>
+              <div class="polaroid-zoom-hint">🔍</div>
+            </div>
+            <div class="polaroid-caption">
+              <h4 class="polaroid-title">Chic & Poised</h4>
+              <p class="polaroid-desc">Carrying herself with natural elegance and poise.</p>
+            </div>
+          </div>
+
+          <!-- Photo 4 -->
+          <div class="polaroid-card">
+            <div class="polaroid-media">
+              <img src="photo_2026-11-19_20-06-48.jpg" alt="Warm & Radiant" loading="lazy">
+              <span class="polaroid-badge">☀️ Sunshine</span>
+              <div class="polaroid-zoom-hint">🔍</div>
+            </div>
+            <div class="polaroid-caption">
+              <h4 class="polaroid-title">Warm & Radiant</h4>
+              <p class="polaroid-desc">A bright presence that elevates any setting.</p>
+            </div>
+          </div>
+
+          <!-- Photo 5 -->
+          <div class="polaroid-card">
+            <div class="polaroid-media">
+              <img src="photo_2026-11-19_20-06-55.jpg" alt="Timeless Elegance" loading="lazy">
+              <span class="polaroid-badge">🌷 Elegance</span>
+              <div class="polaroid-zoom-hint">🔍</div>
+            </div>
+            <div class="polaroid-caption">
+              <h4 class="polaroid-title">Timeless Moments</h4>
+              <p class="polaroid-desc">Graceful style in every candid frame.</p>
+            </div>
+          </div>
+
+          <!-- Photo 6 -->
+          <div class="polaroid-card">
+            <div class="polaroid-media">
+              <img src="photo_2026-11-19_20-07-04.jpg" alt="Aesthetic & Dreamy" loading="lazy">
+              <span class="polaroid-badge">💫 Magnetic</span>
+              <div class="polaroid-zoom-hint">🔍</div>
+            </div>
+            <div class="polaroid-caption">
+              <h4 class="polaroid-title">Aesthetic & Dreamy</h4>
+              <p class="polaroid-desc">Living life with genuine sparkle and flair.</p>
+            </div>
+          </div>
+
+          <!-- Photo 7 -->
+          <div class="polaroid-card">
+            <div class="polaroid-media">
+              <img src="photo_2026-11-19_20-08-07.jpg" alt="Main Character Energy" loading="lazy">
+              <span class="polaroid-badge">👑 Queen Energy</span>
+              <div class="polaroid-zoom-hint">🔍</div>
+            </div>
+            <div class="polaroid-caption">
+              <h4 class="polaroid-title">Main Character Energy</h4>
+              <p class="polaroid-desc">Unapologetically herself, bold, and fabulous.</p>
+            </div>
+          </div>
+
+          <!-- Photo 8 -->
+          <div class="polaroid-card">
+            <div class="polaroid-media">
+              <img src="photo_2026-11-19_20-09-39.jpg" alt="Unstoppable" loading="lazy">
+              <span class="polaroid-badge">🌟 That Spark</span>
+              <div class="polaroid-zoom-hint">🔍</div>
+            </div>
+            <div class="polaroid-caption">
+              <h4 class="polaroid-title">Unstoppable Spark</h4>
+              <p class="polaroid-desc">Stepping into another great year of thriving.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Video Moments Reel -->
+    <section class="moments-section" id="moments">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge">In Her Element</span>
+          <h2 class="section-title">Moments In <span class="gradient-rose">Motion</span></h2>
+          <p class="section-subtitle">Unfiltered laughter, candid joy, and life through her lens.</p>
+        </div>
+
+        <div class="video-grid">
+          <!-- Video 1 -->
+          <div class="video-card">
+            <div class="video-container">
+              <video src="video_2026-11-19_20-07-38.mp4" controls playsinline preload="metadata"></video>
+            </div>
+            <div class="video-info">
+              <h4 class="video-title"><span>🎬</span> Candid Charm</h4>
+              <p class="video-desc">Her spontaneous, adorable expressions.</p>
+            </div>
+          </div>
+
+          <!-- Video 2 -->
+          <div class="video-card">
+            <div class="video-container">
+              <video src="video_2026-11-19_20-09-01.mp4" controls playsinline preload="metadata"></video>
+            </div>
+            <div class="video-info">
+              <h4 class="video-title"><span>🌟</span> Vibrant & Carefree</h4>
+              <p class="video-desc">Full of life, joy, and movement.</p>
+            </div>
+          </div>
+
+          <!-- Video 3 -->
+          <div class="video-card">
+            <div class="video-container">
+              <video src="video_2026-11-19_20-09-11.mp4" controls playsinline preload="metadata"></video>
+            </div>
+            <div class="video-info">
+              <h4 class="video-title"><span>💖</span> In Her Element</h4>
+              <p class="video-desc">Natural confidence and radiant good vibes.</p>
+            </div>
+          </div>
+
+          <!-- Video 4 -->
+          <div class="video-card">
+            <div class="video-container">
+              <video src="video_2026-11-19_20-09-20.mp4" controls playsinline preload="metadata"></video>
+            </div>
+            <div class="video-info">
+              <h4 class="video-title"><span>🌸</span> Spontaneous Smiles</h4>
+              <p class="video-desc">The lively moments that make every day fun.</p>
+            </div>
+          </div>
+
+          <!-- Video 5 -->
+          <div class="video-card">
+            <div class="video-container">
+              <video src="video_2026-11-19_20-09-29.mp4" controls playsinline preload="metadata"></video>
+            </div>
+            <div class="video-info">
+              <h4 class="video-title"><span>✨</span> Shine On</h4>
+              <p class="video-desc">Bringing sparkle to every single frame.</p>
+            </div>
+          </div>
+
+          <!-- Video 6 -->
+          <div class="video-card">
+            <div class="video-container">
+              <video src="video_2026-11-24_20-08-38.mp4" controls playsinline preload="metadata"></video>
+            </div>
+            <div class="video-info">
+              <h4 class="video-title"><span>💫</span> Golden Memories</h4>
+              <p class="video-desc">Every smile worth celebrating.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive Birthday Cake & Wish Candle -->
+    <section class="cake-section" id="cake">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge">Birthday Ritual</span>
+          <h2 class="section-title">Blow Out <span class="gradient-rose">The Candle</span> 🎂</h2>
+          <p class="section-subtitle">Make a birthday wish and tap the cake to blow out the flame!</p>
+        </div>
+
+        <div class="cake-wrapper">
+          <div class="cake-instructions">
+            ✨ Tap the cake to blow out the candle! ✨
+          </div>
+
+          <!-- Interactive Cake -->
+          <div class="cake-stage" id="cakeStage" title="Tap to blow out the candle!">
+            <div class="cake-plate"></div>
+            <div class="cake-bottom-tier"></div>
+            <div class="cake-top-tier"></div>
+            <div class="cake-candle">
+              <div class="cake-wick"></div>
+              <div class="candle-flame" id="candleFlame"></div>
+            </div>
+          </div>
+
+          <!-- Wish Banner Revealed On Blowout -->
+          <div class="cake-wish-banner" id="cakeWishBanner">
+            <h3>Happy Birthday, Prachi! 🎉</h3>
+            <p>
+              Hope you have the best day ever! Thanks for being such a great friend — your laugh, your vibe, and just you being you makes everything better. Eat some cake, take lots of photos, and enjoy your day to the fullest. You deserve it! 👑✨
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- Lightbox Modal for Photos -->
+  <div class="lightbox-modal" id="lightboxModal">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Close modal">&times;</button>
+    <div class="lightbox-content">
+      <img src="" alt="Enlarged view" id="lightboxImg">
+      <div class="lightbox-caption" id="lightboxCaption"></div>
+    </div>
+  </div>
+
+
+
+  <!-- Optional Custom Birthday Audio (fallback to synthesized music box if missing) -->
+
+  <!-- Floating Birthday Music Control -->
+  <button class="floating-music-btn" id="musicToggle" aria-label="Toggle Birthday Music" title="Click to Stop or Play Birthday Music">
+    <span class="music-icon">🎵</span>
+    <span class="music-text">Birthday Song</span>
+    <span class="music-status">Play</span>
+    <span class="music-bars">
+      <span></span><span></span><span></span>
+    </span>
+  </button>
+
+</body>
+</html>

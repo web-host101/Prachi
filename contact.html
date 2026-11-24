@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Send Birthday Wishes - Prachi's Birthday Celebration</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <!-- Confetti Canvas -->
+  <canvas id="confetti-canvas"></canvas>
+
+  <!-- Ambient Glowing Atmosphere -->
+  <div class="ambient-glow">
+    <div class="glow-orb orb-1"></div>
+    <div class="glow-orb orb-2"></div>
+    <div class="glow-orb orb-3"></div>
+  </div>
+
+  <!-- Floating Balloons Container -->
+  <div class="balloons-container" id="balloons"></div>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <a href="index.html" class="nav-brand">
+        PRACHI<span class="highlight">2026</span> <span class="brand-heart">👑</span>
+      </a>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html#home">Home</a></li>
+        <li><a href="index.html#note">My Note</a></li>
+        <li><a href="index.html#lookbook">Lookbook</a></li>
+        <li><a href="index.html#moments">Moments</a></li>
+        <li><a href="index.html#cake">Make a Wish</a></li>
+        <li><a href="contact.html" class="active">Send Wish</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="music-toggle" id="musicToggle" aria-label="Toggle music" title="Play ambient melody">🎵</button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="content-wrapper" style="padding-top: 60px;">
+
+    <!-- Contact & Wishes Section -->
+    <section class="contact-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge">Guestbook & Wishes</span>
+          <h2 class="section-title">Send Your <span class="gradient-rose">Love & Wishes</span></h2>
+          <p class="section-subtitle">Send a personalized message directly to Prachi on her special day.</p>
+        </div>
+
+        <div class="contact-card-box">
+          <h3>Write a Message 💌</h3>
+          <p class="form-intro">Every sweet wish adds another smile to her special celebration!</p>
+
+          <form id="contactForm">
+            <div class="form-group">
+              <label for="name">Your Name</label>
+              <input type="text" id="name" name="name" class="form-control" placeholder="Enter your name" required>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email Address (Optional)</label>
+              <input type="email" id="email" name="email" class="form-control" placeholder="you@example.com">
+            </div>
+
+            <div class="form-group">
+              <label for="message">Your Birthday Message</label>
+              <textarea id="message" name="message" class="form-control" placeholder="Write a sweet, heartfelt birthday message for Prachi..." required></textarea>
+            </div>
+
+            <button type="submit" class="submit-btn">Send Message 💖</button>
+          </form>
+
+          <div class="success-msg" id="successMsg">
+            <div class="check-icon">✓</div>
+            <h3>Message Sent!</h3>
+            <p>Thank you so much for your wonderful wishes for Prachi!</p>
+            <div style="margin-top: 20px;">
+              <a href="index.html" class="btn btn-secondary" style="font-size: 0.9rem; padding: 10px 24px;">Back to Celebration 🌸</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-logo">
+        PRACHI<span>2026</span> <span class="footer-heart">👑</span>
+      </div>
+      <p class="footer-text">
+        Created to celebrate the one and only Prachi on her special day. Dedicated with pride and cheers by Siddharth.
+      </p>
+      <div class="footer-copyright">
+        &copy; 2026 Prachi's Birthday Spotlight. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
